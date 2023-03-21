@@ -22,9 +22,14 @@ impl HelloWorld {
     }
 }
 
-//for initalizing and frame by frame logic.
+/** for Godot related functions
+ * 
+ *  these are virtual functions, and there are more than these two. (such as input)
+ *  I only put these as a nice transition from something like Unity as these two functions
+ *  are similar to start and update. 
+ */
 #[godot_api]
-impl GodotExt for HelloWorld {
+impl NodeVirtual for HelloWorld {
 
     //initalize
     fn init(base: Base<Node>) -> Self {
